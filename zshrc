@@ -1,3 +1,4 @@
+# test
 ZSHUSER=$(whoami)
 ZSHCUSTOMDIR=$HOME/.zsh-custom
 

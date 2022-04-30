@@ -4,11 +4,11 @@ ZSHCUSTOMDIR=$HOME/.zsh-custom
 if [[ $ZSHUSER == 'root' ]]
 then
   ZSHUSERPATH=/root
-  ZSHUSERCOLOUR=1
+  ZSHUSERCOLOUR=red
   ZSHUSERPROMPT=#
 else
   ZSHUSERPATH=/home/$ZSHUSER
-  ZSHUSERCOLOUR=2
+  ZSHUSERCOLOUR=green
   ZSHUSERPROMPT=$
 fi
 
@@ -30,14 +30,14 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 autoload -Uz vcs_info
 precmd() { vcs_info }
 # Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '%F{250}on %{%F{yellow}%}% %b'
+zstyle ':vcs_info:git:*' formats '%F{white}on %{%F{magenta}%}% %b'
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 #PROMPT='%n on ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 PROMPT='
-%{%F{$ZSHUSERCOLOUR}%}%n %F{250}@ %{%F{37}%}%m %F{250}in %{%F{178}%}%~ ${vcs_info_msg_0_}
-%F{250}$ZSHUSERPROMPT '
+%{%F{$ZSHUSERCOLOUR}%}%n %F{white}@ %{%F{cyan}%}%m %F{white}in %{%F{yellow}%}%~ ${vcs_info_msg_0_}
+%F{white}$ZSHUSERPROMPT '
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo

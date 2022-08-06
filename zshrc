@@ -1,5 +1,6 @@
 ZSHUSER=$(whoami)
 ZSHCUSTOMDIR=$HOME/.zsh-custom
+# test
 
 if [[ $ZSHUSER == 'root' ]]
 then

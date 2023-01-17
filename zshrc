@@ -98,7 +98,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 # https://github.com/zsh-users/zsh-autosuggestions
-. $ZSHCUSTOMDIR/zz-plugin-zsh-autosuggestions.zsh
+# . $ZSHCUSTOMDIR/zz-plugin-zsh-autosuggestions.zsh
 
 # auto-complete search history (command (up or down) to scroll through list of history that starts with command)
 # https://github.com/zsh-users/zsh-history-substring-search

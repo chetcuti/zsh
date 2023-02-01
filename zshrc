@@ -32,7 +32,7 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-setopt correct                   # Command spell checking
+# setopt correct                   # Command spell checking
 
 bindkey -v
 zstyle :compinstall filename $ZSHUSERPATH/.zshrc
@@ -98,7 +98,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 # https://github.com/zsh-users/zsh-autosuggestions
-# . $ZSHCUSTOMDIR/zz-plugin-zsh-autosuggestions.zsh
+. $ZSHCUSTOMDIR/zz-plugin-zsh-autosuggestions.zsh
 
 # auto-complete search history (command (up or down) to scroll through list of history that starts with command)
 # https://github.com/zsh-users/zsh-history-substring-search
